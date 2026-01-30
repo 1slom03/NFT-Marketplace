@@ -1,0 +1,120 @@
+.hero-section {
+    padding: 80px 0 180px;
+}
+.hero {
+    @include Display($items:start, $space:space-between, $gap:70px);
+}
+.hero__left-wrapper {
+    @include Display($items:start, $space:start, $gap:0px);
+    flex-direction: column;
+}
+.hero__contents{
+    @include Display($items:start, $space:start, $gap:0px);
+    flex-direction: column;
+}
+.hero__left-wrapper > h1{
+    @include TextStyle($FW:600, $FS:67px, $LH:100%, $CLR:$clr-white);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.hero__left-wrapper > p{
+    @include TextStyle($FW:400, $FS:22px, $LH:160%, $CLR:$clr-white);
+    margin-bottom: 30px;
+}
+.hero__contents > button{
+    @include Display($items:center, $space:start, $gap:12px);
+    background-color: $clr-BtnClr;
+    color: $clr-white;
+    border: solid 1px $clr-BtnClr;
+    margin-bottom: 30px;
+    padding: 20px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    
+    &:hover{
+        background-color: transparent;
+    }
+
+}
+.hero__content-wrapper {
+    @include Display($items:start, $space:space-between, $gap:60px);
+}
+.hero__content {
+    @include TextStyle($FW:400, $FS:24px, $LH:120%, $CLR:$clr-white);
+}
+.hero__right-wrapper {
+    @include Display($items:start, $space:start, $gap:0px);
+    flex-direction: column;
+    background-color: #3B3B3B;
+    border-radius: 20px;
+}
+.hero__right-wrapper > img {
+    margin-bottom: 22px;
+    width: 510px;
+    height: 371px;
+}
+.hero__right-wrapper > h3 {
+    @include TextStyle($FW:600, $FS:22px, $LH:140%, $CLR:$clr-white);
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.hero__anima-wrapper {
+    @include Display($items:center, $space:start, $gap:12px);
+    margin-bottom: 22px;
+    padding-left: 20px;
+}
+.hero__anima-wrapper > p{
+    @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);
+}
+
+@media(max-width:950px){
+    .hero-section {
+        padding: 80px 0 80px;
+    }
+    .hero__left-wrapper > h1{
+        @include TextStyle($FW:600, $FS:38px, $LH:120%, $CLR:$clr-white);
+    }
+    .hero__left-wrapper > p{
+        @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);
+        margin-bottom: 20px;
+    }   
+    .hero__content-wrapper {
+        @include Display($items:start, $space:space-between, $gap:30px);
+    }
+    .hero__content {
+        @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);
+    }
+    .hero__right-wrapper > img {
+        margin-bottom: 22px;
+        width: 330px;
+        height: 221px;
+    }
+}
+@media(max-width:652px){
+    .hero-section {
+        padding: 40px 0;
+    }
+    .hero {
+        @include Display($items:center, $space:start, $gap:40px);
+        flex-direction: column;
+    }
+    .hero__contents{
+        width: 100%;
+        @include Display($items:center, $space:center, $gap:0px);
+        margin: 0 auto;
+    }
+    .hero__left-wrapper > h1{
+        @include TextStyle($FW:600, $FS:28px, $LH:140%, $CLR:$clr-white);
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+    .hero__contents > button{
+        @include Display($items:center, $space:center, $gap:12px);
+        width: 100%;
+    }
+    .hero__left-wrapper > p{
+        @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);
+        margin-bottom: 40px;
+    }
+}
