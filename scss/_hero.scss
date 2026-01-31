@@ -87,7 +87,7 @@
     }
     .hero__right-wrapper > img {
         margin-bottom: 22px;
-        width: 330px;
+        max-width: 330px;
         height: 221px;
     }
 }
@@ -100,7 +100,7 @@
         flex-direction: column;
     }
     .hero__contents{
-        width: 100%;
+        max-width: 100%;
         @include Display($items:center, $space:center, $gap:0px);
         margin: 0 auto;
     }
@@ -111,7 +111,7 @@
     }
     .hero__contents > button{
         @include Display($items:center, $space:center, $gap:12px);
-        width: 100%;
+        max-width: 100%;
     }
     .hero__left-wrapper > p{
         @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);

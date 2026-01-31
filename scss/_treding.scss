@@ -1,0 +1,111 @@
+.treding-section {
+    @include Display($items:start, $space:start, $gap:0px);
+    padding-bottom: 80px;
+}
+.treding {
+    @include Display($items:start, $space:start, $gap:60px);
+    flex-direction: column;
+}
+.treding__top-wrapper {
+    @include Display($items:start, $space:start, $gap:10px);
+    flex-direction: column;
+}
+.treding__top-wrapper > h2 {
+    @include TextStyle($FW:600, $FS:38px, $LH:120%, $CLR:$clr-white);
+}
+.treding__top-wrapper > p{
+    @include TextStyle($FW:400, $FS:22px, $LH:160%, $CLR:$clr-white);
+}
+.treding__list {
+    @include Display($items:center, $space:space-between, $gap:30px);
+}
+.treding__picture-wrapper {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-areas:
+    "dog dog dog"
+    "dog dog dog"
+    "dog dog dog"
+    "cat bear btn";
+    gap: 15px;
+}
+.treding__img1 {
+    border-radius: 20px;
+    border: solid 1px transparent;
+}
+.dog{
+    width: 330px;
+    grid-area: dog;
+}
+.cat {
+    width: 100px;
+    grid-area: cat;
+}
+.bear {
+    width: 100px;
+    grid-area: bear;
+
+}
+.btn {
+    width: 100px;
+    grid-area: btn;
+    @include TextStyle($FW:600, $FS:22px, $LH:160%, $CLR:$clr-white);
+    cursor: pointer;
+    background-color: $clr-BtnClr;
+    transition: all 0.5s linear;
+
+    &:hover{
+        background-color: $clr-white;
+        color: $clr-black;
+    }
+}
+.treding__title-wrapper {
+    @include Display($items:start, $space:start, $gap:10px);
+    flex-direction: column;
+}
+.treding__title-wrapper > h3{
+    @include TextStyle($FW:600, $FS:22px, $LH:140%, $CLR:$clr-white);
+}
+.treding__text{
+    @include Display($items:center, $space:center, $gap:12px);
+}
+.treding__text > p{
+    @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);
+}
+@media(max-width:1000px){
+    .treding__top-wrapper > h2 {
+        @include TextStyle($FW:600, $FS:28px, $LH:140%, $CLR:$clr-white);
+    }
+    .treding__list {
+    }
+    .treding__top-wrapper > p{
+        @include TextStyle($FW:400, $FS:16px, $LH:140%, $CLR:$clr-white);
+    }
+    .three{
+        display: none;
+    }
+}
+@media(max-width:720px){
+    .two{
+        display: none;
+    }
+    .dog{
+        width: 315px;
+    }
+    .cat{
+        width: 95px;
+    }
+    .bear{
+        width: 95px;
+
+    }
+    .btn{
+        width: 95px;
+        @include TextStyle($FW:600, $FS:16px, $LH:160%, $CLR:$clr-white);
+
+    }
+    .treding__text > h2{
+        @include TextStyle($FW:600, $FS:22px, $LH:140%, $CLR:$clr-white);
+    }
+
+}
